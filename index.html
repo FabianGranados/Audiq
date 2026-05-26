@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AUDIQ PRO 01 — Audífonos inalámbricos · BT 5.3 · USB-C | Bogotá</title>
+
+  <meta name="description" content="Audífonos inalámbricos AUDIQ PRO 01. Bluetooth 5.3, USB-C, carga Qi. Compatibles con iOS y Android. Garantía 3 meses. Pagás por el audio, no por el logo. Envío a toda Colombia." />
+  <meta name="keywords" content="audífonos inalámbricos Colombia, audífonos bluetooth Bogotá, alternativa AirPods Colombia, AUDIQ PRO 01, audífonos USB-C carga inalámbrica, audífonos baratos buenos Colombia" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="AUDIQ" />
+  <link rel="canonical" href="https://audiq.co" />
+
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content="AUDIQ PRO 01 — Audífonos honestos hechos en Colombia" />
+  <meta property="og:description" content="Bluetooth 5.3, USB-C, carga Qi. Compatible iOS y Android. $89.900 COP. Garantía 3 meses." />
+  <meta property="og:url" content="https://audiq.co" />
+  <meta property="og:image" content="https://audiq.co/og-pro01.jpg" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:site_name" content="AUDIQ" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AUDIQ PRO 01 — Audífonos honestos" />
+  <meta name="twitter:description" content="Bluetooth 5.3, USB-C, carga Qi. $89.900 COP." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Three.js · escena 3D procedural para el AUDIQ PRO 01 -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "AUDIQ PRO 01 — Audífonos inalámbricos",
+    "description": "Audífonos inalámbricos AUDIQ PRO 01: Bluetooth 5.3, USB-C, carga inalámbrica Qi. 4 horas de batería continua, 20 horas con estuche. Compatibles con iOS y Android. Garantía 3 meses.",
+    "brand": { "@type": "Brand", "name": "AUDIQ" },
+    "sku": "AUDIQ-PRO-01",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "COP",
+      "price": "89900",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "7.1",
+      "bestRating": "10",
+      "reviewCount": "127"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AUDIQ",
+    "url": "https://audiq.co",
+    "description": "Marca colombiana de audífonos inalámbricos honestos.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bogotá",
+      "addressCountry": "CO"
+    }
+  }
+  </script>
+
+  <style>
+    /* =========================================================
+       AUDIQ · Dirección A — Producto en negro mate
+       Reglas: 80/15/5 · negro #0A0A0A · blanco #FAFAFA · verde #00FF88
+       Una sola fuente de luz · cero decoración · texto alineado a la izquierda
+       ========================================================= */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0A0A0A;
+      --black-deep: #050505;
+      --white: #FAFAFA;
+      --gray: #6B6B6B;
+      --gray-soft: rgba(250,250,250,0.55);
+      --gray-faint: rgba(250,250,250,0.10);
+      --gray-line: rgba(250,250,250,0.08);
+      --green: #00FF88;
+      --green-soft: rgba(0,255,136,0.12);
+
+      --font-display: 'Space Grotesk', -apple-system, system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+      --font-serif: 'Instrument Serif', 'Times New Roman', serif;
+
+      --max: 1240px;
+      --pad-x: clamp(20px, 4vw, 64px);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-weight: 400;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--green); color: var(--black); }
+    a { text-decoration: none; color: inherit; }
+    button { font: inherit; background: none; border: 0; color: inherit; cursor: pointer; }
+
+    /* ===== ÚNICA ANIMACIÓN DE ENTRADA: blur→claro, 300ms, sin delays ===== */
+    @keyframes aq-enter {
+      from { opacity: 0; filter: blur(6px); transform: translateY(6px); }
+      to   { opacity: 1; filter: blur(0); transform: translateY(0); }
+    }
+    .enter { animation: aq-enter 320ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+    /* ===== ÚNICO LOOP: el LED del estuche respirando, 3s ciclo ===== */
+    @keyframes aq-led-breath {
+      0%, 100% { opacity: 0.45; }
+      50%      { opacity: 1; }
+    }
+
+    /* ===== SR-ONLY ===== */
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+
+    /* =========================================================
+       NAV — Logo · Llamar · WhatsApp (simplificada)
+       ========================================================= */
+    .nav {
+      position: fixed;
+      top: 18px; left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 8px 8px 18px;
+      background: rgba(10,10,10,0.72);
+      backdrop-filter: blur(20px) saturate(160%);
+      -webkit-backdrop-filter: blur(20px) saturate(160%);
+      border: 0.5px solid var(--gray-line);
+      border-radius: 100px;
+      max-width: calc(100vw - 28px);
+    }
+    .nav .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 1px;
+      padding-right: 16px;
+      border-right: 0.5px solid var(--gray-line);
+      margin-right: 8px;
+    }
+    .nav .logo-text {
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: -0.4px;
+      color: var(--white);
+    }
+    .nav-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 14px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(250,250,250,0.78);
+      transition: color 180ms ease, background 180ms ease;
+    }
+    .nav-ghost:hover { color: var(--white); background: rgba(250,250,250,0.05); }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--black);
+      background: var(--green);
+      letter-spacing: -0.1px;
+      transition: filter 180ms ease, transform 180ms ease;
+    }
+    .nav-cta:hover { filter: brightness(1.06); transform: translateY(-1px); }
+
+    /* =========================================================
+       HERO — una sola fuente de luz · 2-col · tagline IZQUIERDA · producto DERECHA
+       ========================================================= */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      padding: 124px var(--pad-x) 48px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /* Una sola fuente de luz: arriba-izquierda, suave */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 18% 20%, rgba(250,250,250,0.06), transparent 60%),
+        radial-gradient(ellipse 80% 70% at 50% 130%, rgba(10,10,10,1), rgba(5,5,5,1));
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: clamp(40px, 6vw, 96px);
+      align-items: center;
+    }
+
+    /* ----- LEFT COLUMN ----- */
+    .hero-left { min-width: 0; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: rgba(250,250,250,0.55);
+      margin-bottom: 28px;
+    }
+    .eyebrow-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 0 rgba(0,255,136,0);
+    }
+    .eyebrow-sep { color: rgba(250,250,250,0.25); }
+
+    .display {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(44px, 6.4vw, 84px);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+      color: var(--white);
+      margin-bottom: 28px;
+      text-wrap: balance;
+    }
+    .display .accent {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--green);
+      letter-spacing: -0.01em;
+      padding-right: 0.02em;
+    }
+    .display .stop { color: var(--green); }
+
+    .lede {
+      font-size: clamp(15px, 1.15vw, 17px);
+      line-height: 1.55;
+      color: var(--gray-soft);
+      max-width: 46ch;
+      letter-spacing: -0.005em;
+      margin-bottom: 40px;
+    }
+
+    /* ----- SPEC STRIP (4-col, mono) ----- */
+    .spec-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 0.5px solid var(--gray-line);
+      border-bottom: 0.5px solid var(--gray-line);
+      margin-bottom: 36px;
+    }
+    .spec-cell {
+      padding: 18px 0 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      border-right: 0.5px solid var(--gray-line);
+    }
+    .spec-cell:last-child { border-right: 0; }
+    .spec-cell:not(:first-child) { padding-left: 16px; }
+    .spec-value {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      line-height: 1;
+    }
+    .spec-unit {
+      color: var(--gray-soft);
+      font-weight: 500;
+      font-size: 14px;
+      margin-left: 1px;
+    }
+    .spec-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(250,250,250,0.42);
+    }
+
+    /* ----- CTA cluster ----- */
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 26px;
+      border-radius: 100px;
+      background: var(--green);
+      color: var(--black);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: -0.1px;
+      transition: transform 200ms cubic-bezier(0.22,1,0.36,1), filter 200ms ease, box-shadow 200ms ease;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.4);
+    }
+    .cta-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+      box-shadow: 0 8px 24px rgba(0,255,136,0.18);
+    }
+    .cta-primary .arr { transition: transform 200ms ease; }
+    .cta-primary:hover .arr { transform: translateX(3px); }
+
+    .cta-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 24px;
+      border-radius: 100px;
+      border: 0.5px solid rgba(250,250,250,0.18);
+      color: var(--white);
+      font-weight: 500;
+      font-size: 14.5px;
+      letter-spacing: -0.05px;
+      transition: border-color 200ms ease, color 200ms ease, background 200ms ease, transform 200ms ease;
+    }
+    .cta-ghost:hover {
+      border-color: rgba(250,250,250,0.45);
+      background: rgba(250,250,250,0.04);
+      transform: translateY(-1px);
+    }
+
+    .price-hint {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-left: 4px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: rgba(250,250,250,0.45);
+      letter-spacing: 0.06em;
+    }
+    .price-hint b {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+
+    /* =========================================================
+       PRODUCT STAGE (right column)
+       silhouette gris + image-slot encima · LED verde respirando
+       ========================================================= */
+    .product-stage {
+      --glow: #00FF88;
+      --glow-intensity: 0.5;
+      position: relative;
+      width: 100%;
+      height: clamp(420px, 60vh, 620px);
+      max-width: 640px;
+      margin: 0 auto;
+      isolation: isolate;
+    }
+
+    /* Glow verde sutil DETRÁS del modelo */
+    .product-glow {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -42%);
+      width: 75%;
+      height: 60%;
+      background: radial-gradient(ellipse at center,
+        color-mix(in srgb, var(--glow) calc(var(--glow-intensity) * 35%), transparent) 0%,
+        color-mix(in srgb, var(--glow) calc(var(--glow-intensity) * 12%), transparent) 40%,
+        transparent 75%);
+      filter: blur(40px);
+      pointer-events: none;
+      z-index: 0;
+      transition: opacity 320ms ease;
+    }
+
+    /* Reflejo de piso */
+    .product-floor {
+      position: absolute;
+      bottom: 4%;
+      left: 12%;
+      right: 12%;
+      height: 22px;
+      background:
+        radial-gradient(ellipse at center, rgba(0,0,0,0.7), transparent 65%),
+        radial-gradient(ellipse at 50% 40%, color-mix(in srgb, var(--glow) calc(var(--glow-intensity) * 18%), transparent), transparent 55%);
+      filter: blur(8px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* AUDIQ CANVAS (Three.js) */
+    .audiq-canvas {
+      position: relative;
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      background: transparent;
+      z-index: 2;
+      outline: none;
+      opacity: 0;
+      transition: opacity 600ms ease;
+      cursor: grab;
+      touch-action: pan-y;
+    }
+    .audiq-canvas.is-loaded { opacity: 1; }
+    .audiq-canvas:active { cursor: grabbing; }
+
+    /* SKELETON / LOADER */
+    .product-skeleton {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      pointer-events: none;
+      transition: opacity 500ms ease, visibility 0s linear 500ms;
+    }
+    .product-skeleton.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .skel-blob {
+      width: 58%;
+      height: 38%;
+      max-width: 380px;
+      max-height: 260px;
+      background:
+        linear-gradient(135deg,
+          rgba(250,250,250,0.05) 0%,
+          rgba(250,250,250,0.12) 40%,
+          rgba(250,250,250,0.05) 80%);
+      background-size: 200% 200%;
+      border-radius: 24px;
+      filter: blur(2px);
+      animation: aq-shimmer 2s ease-in-out infinite;
+    }
+    @keyframes aq-shimmer {
+      0%, 100% { background-position: 0% 0%; opacity: 0.5; }
+      50%      { background-position: 100% 100%; opacity: 0.85; }
+    }
+    .skel-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(250,250,250,0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .skel-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: aq-led-breath 1.4s ease-in-out infinite;
+    }
+
+    /* Hint flotante: rotación habilitada */
+    .product-hint {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(250,250,250,0.32);
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 4;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .product-hint::before {
+      content: "";
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--green);
+      opacity: 0.6;
+    }
+
+    /* =========================================================
+       BELOW THE FOLD — Trust + Pilares + Final CTA
+       ========================================================= */
+    .section {
+      padding: clamp(80px, 11vw, 160px) var(--pad-x);
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .section-tag {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(250,250,250,0.45);
+      margin-bottom: 28px;
+    }
+    .section-title {
+      font-weight: 700;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.04;
+      letter-spacing: -0.025em;
+      color: var(--white);
+      max-width: 22ch;
+      margin-bottom: 18px;
+      text-wrap: balance;
+    }
+    .section-sub {
+      color: var(--gray-soft);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 56ch;
+    }
+
+    /* Divider sutil */
+    .divider {
+      border: 0;
+      border-top: 0.5px solid var(--gray-line);
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    /* ----- Trust grid ----- */
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--gray-line);
+      border: 0.5px solid var(--gray-line);
+      border-radius: 14px;
+      overflow: hidden;
+      margin-top: 56px;
+    }
+    .trust-cell {
+      background: var(--black);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: background 200ms ease;
+    }
+    .trust-cell:hover { background: #0F0F0F; }
+    .trust-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(250,250,250,0.42);
+    }
+    .trust-value {
+      font-weight: 700;
+      font-size: 26px;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      color: var(--white);
+    }
+    .trust-sub {
+      font-size: 13px;
+      color: var(--gray-soft);
+      line-height: 1.45;
+    }
+
+    /* ----- Pilares (3-col) ----- */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 56px;
+      margin-top: 56px;
+    }
+    .pillar { min-width: 0; }
+    .pillar-num {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--green);
+      margin-bottom: 14px;
+    }
+    .pillar-title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .pillar-body {
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--gray-soft);
+    }
+
+    /* ----- Final CTA ----- */
+    .final {
+      padding: clamp(80px, 11vw, 140px) var(--pad-x);
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .final h2 {
+      font-weight: 700;
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .final p {
+      color: var(--gray-soft);
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+    .final .cta-row { justify-content: center; }
+
+    /* ----- FOOTER ----- */
+    .footer {
+      padding: 36px var(--pad-x) 28px;
+      border-top: 0.5px solid var(--gray-line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--max);
+      margin: 0 auto;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.1em;
+      color: rgba(250,250,250,0.4);
+    }
+    .footer-left { display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .footer-sep { color: rgba(250,250,250,0.18); }
+
+    /* =========================================================
+       FAB · WhatsApp · Llamar · Burbuja a 3s (sin badge rojo, sin pulso)
+       ========================================================= */
+    .fab-stack {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 60;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+    .fab-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .fab-call {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: rgba(20,20,20,0.85);
+      backdrop-filter: blur(14px);
+      border: 0.5px solid rgba(250,250,250,0.18);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 200ms ease, transform 200ms ease, background 200ms ease;
+    }
+    .fab-call:hover {
+      border-color: rgba(0,255,136,0.55);
+      background: rgba(0,255,136,0.06);
+      transform: translateY(-2px);
+    }
+    .fab-call svg { stroke: var(--white); transition: stroke 200ms ease; }
+    .fab-call:hover svg { stroke: var(--green); }
+
+    .fab-wa {
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      background: var(--green);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(0,255,136,0.18);
+      transition: transform 200ms ease, filter 200ms ease, box-shadow 200ms ease;
+    }
+    .fab-wa:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+      box-shadow: 0 10px 28px rgba(0,255,136,0.28);
+    }
+
+    /* Bubble */
+    .wa-bubble {
+      width: 296px;
+      background: #111111;
+      border: 0.5px solid var(--gray-line);
+      border-radius: 18px;
+      padding: 16px;
+      opacity: 0;
+      transform: translateY(8px);
+      pointer-events: none;
+      transition: opacity 260ms ease, transform 260ms cubic-bezier(0.22,1,0.36,1);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.55);
+    }
+    .wa-bubble.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .wa-bubble-head {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 12px;
+    }
+    .wa-bubble-avatar {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--black);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: -0.5px;
+    }
+    .wa-bubble-name {
+      font-size: 13px; font-weight: 700; color: var(--white);
+      letter-spacing: -0.1px;
+    }
+    .wa-bubble-meta {
+      display: flex; align-items: center; gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 10px; color: rgba(250,250,250,0.45);
+      letter-spacing: 0.05em;
+    }
+    .wa-bubble-meta .dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--green);
+    }
+    .wa-bubble-text {
+      font-size: 14px; line-height: 1.4;
+      color: rgba(250,250,250,0.85);
+      margin-bottom: 14px;
+      letter-spacing: -0.1px;
+    }
+    .wa-bubble-text b { color: var(--white); font-weight: 700; }
+    .wa-bubble-cta {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      width: 100%;
+      padding: 11px 16px;
+      border-radius: 100px;
+      background: var(--green); color: var(--black);
+      font-weight: 700; font-size: 13px;
+      letter-spacing: -0.1px;
+      transition: filter 180ms ease;
+    }
+    .wa-bubble-cta:hover { filter: brightness(1.06); }
+    .wa-bubble-close {
+      position: absolute;
+      top: 8px; right: 8px;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: rgba(250,250,250,0.06);
+      color: rgba(250,250,250,0.55);
+      font-size: 16px;
+      line-height: 1;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 180ms ease, color 180ms ease;
+    }
+    .wa-bubble-close:hover { background: rgba(250,250,250,0.12); color: var(--white); }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+    @media (max-width: 960px) {
+      .hero { padding-top: 112px; min-height: auto; }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .hero-left { order: 2; }
+      .product-stage { order: 1; max-width: 480px; height: clamp(360px, 55vw, 460px); }
+      .display { font-size: clamp(40px, 9vw, 56px); }
+      .pillars { grid-template-columns: 1fr; gap: 36px; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .nav { padding: 6px 6px 6px 14px; gap: 4px; }
+      .nav .logo { padding-right: 10px; margin-right: 4px; }
+      .nav-ghost span { display: none; }
+      .nav-ghost { padding: 8px 10px; }
+      .display { font-size: clamp(36px, 11vw, 48px); }
+      .spec-strip { grid-template-columns: repeat(2, 1fr); }
+      .spec-cell { border-bottom: 0.5px solid var(--gray-line); padding: 16px 0; }
+      .spec-cell:nth-child(2) { border-right: 0; }
+      .spec-cell:nth-last-child(-n+2) { border-bottom: 0; }
+      .spec-cell:not(:first-child) { padding-left: 14px; }
+      .spec-cell:nth-child(3) { padding-left: 0; }
+      .trust-grid { grid-template-columns: 1fr; }
+      .footer { font-size: 9.5px; }
+      .wa-bubble { width: calc(100vw - 32px); max-width: 320px; }
+      .fab-stack { right: 14px; bottom: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="sr-only">AUDIQ PRO 01 — Audífonos inalámbricos honestos. Bluetooth 5.3, USB-C, carga inalámbrica Qi. Compatibles con iOS y Android. 4 horas de batería continua, 20 horas con estuche. Garantía 3 meses. $89.900 COP.</h1>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav enter" aria-label="Navegación principal">
+    <a href="#" class="logo" aria-label="AUDIQ — Inicio">
+      <span class="logo-text">AUDI</span>
+      <svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <circle cx="11" cy="13" r="8.5" stroke="#FAFAFA" stroke-width="2.4" />
+        <line x1="17.2" y1="18.8" x2="23.5" y2="24.5" stroke="#00FF88" stroke-width="2.4" stroke-linecap="square" />
+      </svg>
+    </a>
+    <a href="tel:+573000000000" class="nav-ghost" aria-label="Llamar a AUDIQ">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      <span>Llamar</span>
+    </a>
+    <a href="https://wa.me/573000000000?text=Hola%20AUDIQ%2C%20quiero%20comprar%20el%20PRO%2001" target="_blank" rel="noopener noreferrer" class="nav-cta" aria-label="Comprar por WhatsApp">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="#0A0A0A" aria-hidden="true">
+        <path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 003.84.98h.01a7.94 7.94 0 005.55-13.56zm-5.55 12.21h-.01a6.6 6.6 0 01-3.35-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.59 6.59 0 1112.23-3.49 6.55 6.55 0 01-6.64 6.58z"/>
+      </svg>
+      WhatsApp
+    </a>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <main class="hero" role="main">
+    <div class="hero-grid">
+
+      <!-- LEFT -->
+      <div class="hero-left enter">
+        <div class="eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          <span>// AUDIQ PRO 01</span>
+          <span class="eyebrow-sep">·</span>
+          <span>DROP 001</span>
+          <span class="eyebrow-sep">·</span>
+          <span>BOGOTÁ 2026</span>
+        </div>
+
+        <h2 class="display" aria-label="Pagás por el audio, no por el logo">
+          Pagás por el<br />
+          <span class="accent">audio</span>, no por<br />
+          el logo<span class="stop">.</span>
+        </h2>
+
+        <p class="lede">
+          Audífonos inalámbricos con la estética de las marcas premium a una fracción del precio. Bluetooth 5.3, USB-C, carga Qi. Funcionan con iPhone y Android.
+        </p>
+
+        <div class="spec-strip" role="list" aria-label="Specs técnicas">
+          <div class="spec-cell" role="listitem">
+            <span class="spec-value">4<span class="spec-unit">h</span></span>
+            <span class="spec-label">Batería</span>
+          </div>
+          <div class="spec-cell" role="listitem">
+            <span class="spec-value">20<span class="spec-unit">h</span></span>
+            <span class="spec-label">Con estuche</span>
+          </div>
+          <div class="spec-cell" role="listitem">
+            <span class="spec-value">5.3</span>
+            <span class="spec-label">Bluetooth</span>
+          </div>
+          <div class="spec-cell" role="listitem">
+            <span class="spec-value">USB-C<span class="spec-unit"> +Qi</span></span>
+            <span class="spec-label">Carga</span>
+          </div>
+        </div>
+
+        <div class="cta-row" role="group" aria-label="Comprar o llamar">
+          <a href="https://wa.me/573000000000?text=Hola%20AUDIQ%2C%20quiero%20comprar%20el%20PRO%2001" target="_blank" rel="noopener noreferrer" class="cta-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#0A0A0A" aria-hidden="true">
+              <path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 003.84.98h.01a7.94 7.94 0 005.55-13.56zm-5.55 12.21h-.01a6.6 6.6 0 01-3.35-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.59 6.59 0 1112.23-3.49 6.55 6.55 0 01-6.64 6.58z"/>
+            </svg>
+            Comprar por WhatsApp
+            <span class="arr" aria-hidden="true">→</span>
+          </a>
+          <a href="tel:+573000000000" class="cta-ghost" aria-label="Llamar ahora">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            Llamar ahora
+          </a>
+          <span class="price-hint" aria-label="Precio">
+            desde <b>$89.900</b> COP
+          </span>
+        </div>
+      </div>
+
+      <!-- RIGHT — Product stage · visor 3D interactivo -->
+      <div class="product-stage enter" id="productStage" aria-label="Visor 3D del AUDIQ PRO 01">
+        <!-- Glow verde sutil detrás del modelo -->
+        <div class="product-glow" id="productGlow" aria-hidden="true"></div>
+
+        <!-- Reflejo de piso -->
+        <div class="product-floor" aria-hidden="true"></div>
+
+        <!-- Skeleton mientras carga el .glb -->
+        <div class="product-skeleton" id="productSkeleton" aria-hidden="true">
+          <div class="skel-blob"></div>
+          <span class="skel-label"><span class="skel-dot"></span>Cargando modelo 3D</span>
+        </div>
+
+        <!-- Visor 3D · Three.js scene (procedural + GLTF) -->
+        <canvas id="audiqCanvas" class="audiq-canvas" aria-label="Visor 3D del AUDIQ PRO 01"></canvas>
+
+        <span class="product-hint" id="productHint">arrastrá para rotar · scroll-friendly</span>
+      </div>
+
+    </div>
+  </main>
+
+  <hr class="divider" />
+
+  <!-- ============ TRUST GRID ============ -->
+  <section class="section" id="trust" aria-label="Garantías y condiciones">
+    <span class="section-tag">// confianza</span>
+    <h2 class="section-title">Sin sorpresas, sin trucos, sin letra chiquita.</h2>
+    <p class="section-sub">El precio que ves es el precio final. La garantía es real y se atiende por WhatsApp. Si te equivocaste de modelo, te lo cambiamos.</p>
+
+    <div class="trust-grid">
+      <div class="trust-cell">
+        <span class="trust-label">desde</span>
+        <span class="trust-value">$89.900</span>
+        <span class="trust-sub">COP · envío incluido</span>
+      </div>
+      <div class="trust-cell">
+        <span class="trust-label">envío</span>
+        <span class="trust-value">1–5 días</span>
+        <span class="trust-sub">a toda Colombia</span>
+      </div>
+      <div class="trust-cell">
+        <span class="trust-label">garantía</span>
+        <span class="trust-value">3 meses</span>
+        <span class="trust-sub">contra fallas de fábrica</span>
+      </div>
+      <div class="trust-cell">
+        <span class="trust-label">retracto</span>
+        <span class="trust-value">5 días</span>
+        <span class="trust-sub">producto sin uso</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ============ PILARES ============ -->
+  <section class="section" id="manifesto" aria-label="Manifiesto AUDIQ">
+    <span class="section-tag">// principios</span>
+    <h2 class="section-title">Cuatro reglas. Sin excepciones.</h2>
+    <p class="section-sub">No competimos contra Apple, Sony o Bose. Competimos contra la idea de que para tener audífonos buenos hay que pagar 800 mil pesos.</p>
+
+    <div class="pillars">
+      <article class="pillar">
+        <div class="pillar-num">01 // claridad</div>
+        <h3 class="pillar-title">Hablamos claro.</h3>
+        <p class="pillar-body">Si la batería son 4 horas, decimos 4 horas. Sin "hasta", sin redondeos engañosos. Cada cifra es verificable.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar-num">02 // precio</div>
+        <h3 class="pillar-title">El precio es el precio.</h3>
+        <p class="pillar-body">No tachamos precios inflados. No anunciamos ofertas falsas. $89.900 incluye envío. Punto.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar-num">03 // soporte</div>
+        <h3 class="pillar-title">Si se daña, lo cambiamos.</h3>
+        <p class="pillar-body">WhatsApp directo, respuesta humana. Sin formularios eternos, sin tickets perdidos, sin "permítame transferirlo".</p>
+      </article>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final" id="final" aria-label="Comprar">
+    <h2>¿Listo para escuchar?</h2>
+    <p>Te respondemos en WhatsApp o llamada. Sin formularios.</p>
+    <div class="cta-row">
+      <a href="https://wa.me/573000000000?text=Hola%20AUDIQ%2C%20quiero%20comprar%20el%20PRO%2001" target="_blank" rel="noopener noreferrer" class="cta-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#0A0A0A" aria-hidden="true">
+          <path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 003.84.98h.01a7.94 7.94 0 005.55-13.56z"/>
+        </svg>
+        Comprar por WhatsApp
+        <span class="arr" aria-hidden="true">→</span>
+      </a>
+      <a href="tel:+573000000000" class="cta-ghost" aria-label="Llamar ahora">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        Llamar ahora
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-left">
+      <span>© 2026 AUDIQ</span>
+      <span class="footer-sep">·</span>
+      <span>BOGOTÁ · COLOMBIA</span>
+      <span class="footer-sep">·</span>
+      <span>PSE · NEQUI · TARJETA</span>
+    </div>
+    <div class="footer-right">v1.0 / DROP 001</div>
+  </footer>
+
+  <!-- ============ FAB STACK ============ -->
+  <div class="fab-stack" aria-hidden="false">
+    <!-- Bubble (aparece a los 3s) -->
+    <div class="wa-bubble" id="waBubble" role="dialog" aria-label="Mensaje de AUDIQ" aria-hidden="true">
+      <button class="wa-bubble-close" aria-label="Cerrar mensaje" onclick="closeBubble()">×</button>
+      <div class="wa-bubble-head">
+        <div class="wa-bubble-avatar" aria-hidden="true">AU</div>
+        <div>
+          <div class="wa-bubble-name">AUDIQ · Bogotá</div>
+          <div class="wa-bubble-meta"><span class="dot" aria-hidden="true"></span>en línea</div>
+        </div>
+      </div>
+      <p class="wa-bubble-text">Hola. ¿Te ayudo con el <b>AUDIQ PRO 01</b>? Te respondo en minutos.</p>
+      <a href="https://wa.me/573000000000?text=Hola%20AUDIQ%2C%20quiero%20info%20del%20PRO%2001" target="_blank" rel="noopener noreferrer" class="wa-bubble-cta">
+        Iniciar chat
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="fab-row">
+      <a href="tel:+573000000000" class="fab-call" aria-label="Llamar a AUDIQ" title="Llamar ahora">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FAFAFA" stroke-width="2" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+      </a>
+      <a href="https://wa.me/573000000000?text=Hola%20AUDIQ%2C%20quiero%20info%20del%20PRO%2001" target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="Escribir por WhatsApp" title="Escribir por WhatsApp">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#0A0A0A" aria-hidden="true">
+          <path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 003.84.98h.01a7.94 7.94 0 005.55-13.56zm-5.55 12.21h-.01a6.6 6.6 0 01-3.35-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.59 6.59 0 1112.23-3.49 6.55 6.55 0 01-6.64 6.58z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Burbuja WA: aparece a 3s · dismiss persistente por sesión · sin pulso
+    (function(){
+      var DISMISS_KEY = 'audiq_wa_dismissed';
+      var bubble = document.getElementById('waBubble');
+      var shown = false;
+      var dismissed = false;
+      try { dismissed = sessionStorage.getItem(DISMISS_KEY) === '1'; } catch(e) {}
+
+      function show() {
+        if (shown || dismissed) return;
+        bubble.classList.add('show');
+        bubble.setAttribute('aria-hidden', 'false');
+        shown = true;
+      }
+      window.closeBubble = function() {
+        bubble.classList.remove('show');
+        bubble.setAttribute('aria-hidden', 'true');
+        dismissed = true;
+        try { sessionStorage.setItem(DISMISS_KEY, '1'); } catch(e) {}
+      };
+
+      setTimeout(show, 3000);
+    })();
+  </script>
+
+  <!-- ============ STAGE WIRING ============ -->
+  <script>
+    (function(){
+      var canvas = document.getElementById('audiqCanvas');
+      var skel = document.getElementById('productSkeleton');
+      var hint = document.getElementById('productHint');
+
+      function withStage(fn) {
+        if (window.audiqStage) return fn(window.audiqStage);
+        document.addEventListener('audiqstage:ready', function(){ fn(window.audiqStage); }, { once: true });
+      }
+      withStage(function(s){ s.setModel('assets/audiq-pro01.glb'); });
+
+      canvas.addEventListener('audiq:loading', function(){
+        if (skel) skel.classList.remove('hidden');
+        canvas.classList.remove('is-loaded');
+      });
+      canvas.addEventListener('audiq:load', function(){
+        canvas.classList.add('is-loaded');
+        if (skel) skel.classList.add('hidden');
+      });
+      canvas.addEventListener('audiq:error', function(){
+        if (skel) skel.classList.add('hidden');
+        canvas.classList.add('is-loaded');
+      });
+
+      var hintHidden = false;
+      function hideHint(){
+        if (hintHidden || !hint) return;
+        hintHidden = true;
+        hint.style.transition = 'opacity 600ms ease';
+        hint.style.opacity = '0';
+      }
+      canvas.addEventListener('audiq:interaction', hideHint, { once: true });
+      setTimeout(hideHint, 6000);
+
+      // Fallback: hide skeleton after 10s even if model never loads
+      setTimeout(function(){ if (skel) skel.classList.add('hidden'); canvas.classList.add('is-loaded'); }, 10000);
+    })();
+  </script>
+
+  <!-- ============ THREE.JS STAGE (procedural earbuds + GLTF loader) ============ -->
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+    class AudiqStage {
+      constructor(canvas) {
+        this.canvas = canvas;
+        this.modelGroup = new THREE.Group();
+        this._currentModelKey = null;
+        this._loader = null;
+        this._envName = 'neutral';
+
+        this._initRenderer();
+        this._initScene();
+        this._initCamera();
+        this._initEnv();
+        this._initLights();
+        this._initFloor();
+        this._initControls();
+        this._bindResize();
+
+        this.scene.add(this.modelGroup);
+        this._animate();
+      }
+
+      _initRenderer() {
+        this.renderer = new THREE.WebGLRenderer({
+          canvas: this.canvas, antialias: true, alpha: true, powerPreference: 'high-performance'
+        });
+        this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        this.renderer.toneMappingExposure = 1.0;
+        this.renderer.outputColorSpace = THREE.SRGBColorSpace;
+        this.renderer.shadowMap.enabled = true;
+        this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        this.renderer.setClearColor(0x000000, 0);
+      }
+      _initScene() { this.scene = new THREE.Scene(); }
+      _initCamera() {
+        const parent = this.canvas.parentElement;
+        const w = parent.clientWidth || 600;
+        const h = parent.clientHeight || 600;
+        this.camera = new THREE.PerspectiveCamera(30, w / h, 0.1, 100);
+        this.camera.position.set(0, 0.1, 8.6);
+      }
+      _initEnv() {
+        this._pmrem = new THREE.PMREMGenerator(this.renderer);
+        this._roomEnv = new RoomEnvironment(this.renderer);
+        this._setEnvironment('neutral');
+      }
+      _setEnvironment(name) {
+        if (!name) { this.scene.environment = null; return; }
+        if (!this._envTex) {
+          this._envTex = this._pmrem.fromScene(this._roomEnv, 0.04).texture;
+        }
+        this.scene.environment = this._envTex;
+      }
+      _initLights() {
+        this.hemi = new THREE.HemisphereLight(0xfafaff, 0x101010, 0.35);
+        this.scene.add(this.hemi);
+
+        // Key light · upper-left · white
+        this.keyLight = new THREE.DirectionalLight(0xffffff, 2.4);
+        this.keyLight.position.set(-4, 6.5, 4.5);
+        this.keyLight.castShadow = true;
+        this.keyLight.shadow.mapSize.set(2048, 2048);
+        const sc = this.keyLight.shadow.camera;
+        sc.near = 0.1; sc.far = 25; sc.left = -5; sc.right = 5; sc.top = 5; sc.bottom = -5;
+        this.keyLight.shadow.bias = -0.0002;
+        this.keyLight.shadow.radius = 8;
+        this.scene.add(this.keyLight);
+
+        // Rim light · back-right · neutro suave
+        this.rimLight = new THREE.DirectionalLight(0xffffff, 0.35);
+        this.rimLight.position.set(3.5, 3, -5);
+        this.scene.add(this.rimLight);
+
+        // Fill light · front-bottom · soft white
+        this.fillLight = new THREE.PointLight(0xffffff, 14, 14, 1.6);
+        this.fillLight.position.set(2.8, -0.4, 4.5);
+        this.scene.add(this.fillLight);
+      }
+      _initFloor() {
+        // Shadow-only (mantiene canvas transparente excepto donde cae sombra)
+        this.floor = new THREE.Mesh(
+          new THREE.PlaneGeometry(60, 60),
+          new THREE.ShadowMaterial({ opacity: 0.5, color: 0x000000 })
+        );
+        this.floor.rotation.x = -Math.PI / 2;
+        this.floor.position.y = -1.7;
+        this.floor.receiveShadow = true;
+        this.scene.add(this.floor);
+      }
+      _initControls() {
+        this.controls = new OrbitControls(this.camera, this.canvas);
+        this.controls.target.set(0, -0.30, 0);
+        this.controls.enableDamping = true;
+        this.controls.dampingFactor = 0.08;
+        this.controls.enableZoom = false;
+        this.controls.enablePan = false;
+        this.controls.autoRotate = true;
+        this.controls.autoRotateSpeed = 1.25;
+        this.controls.minPolarAngle = Math.PI * 0.25;
+        this.controls.maxPolarAngle = Math.PI * 0.62;
+        this.controls.update();
+
+        this.controls.addEventListener('start', () => {
+          this.canvas.dispatchEvent(new CustomEvent('audiq:interaction'));
+        });
+      }
+      _bindResize() {
+        const ro = new ResizeObserver(() => this._resize());
+        ro.observe(this.canvas.parentElement);
+        this._resize();
+      }
+      _resize() {
+        const parent = this.canvas.parentElement;
+        if (!parent) return;
+        const w = parent.clientWidth;
+        const h = parent.clientHeight;
+        if (w === 0 || h === 0) return;
+        this.renderer.setSize(w, h, false);
+        this.camera.aspect = w / h;
+        this.camera.updateProjectionMatrix();
+      }
+      _animate() {
+        const tick = () => {
+          this.controls.update();
+          this.renderer.render(this.scene, this.camera);
+          this._raf = requestAnimationFrame(tick);
+        };
+        tick();
+      }
+
+      _clearModelGroup() {
+        while (this.modelGroup.children.length > 0) {
+          const child = this.modelGroup.children[0];
+          this.modelGroup.remove(child);
+          child.traverse?.((n) => {
+            if (n.geometry) n.geometry.dispose();
+            if (n.material) {
+              if (Array.isArray(n.material)) n.material.forEach(m => m.dispose());
+              else n.material.dispose();
+            }
+          });
+        }
+      }
+      setModel(urlOrKey) {
+        if (urlOrKey === this._currentModelKey) return;
+        this._currentModelKey = urlOrKey;
+        this.canvas.dispatchEvent(new CustomEvent('audiq:loading'));
+
+        if (!this._loader) this._loader = new GLTFLoader();
+        this._loader.load(
+          urlOrKey,
+          (gltf) => {
+            this._clearModelGroup();
+            const root = gltf.scene;
+            const box = new THREE.Box3().setFromObject(root);
+            const size = new THREE.Vector3(); box.getSize(size);
+            const maxDim = Math.max(size.x, size.y, size.z) || 1;
+            const scale = 2.6 / maxDim;
+            root.scale.setScalar(scale);
+            const center = box.getCenter(new THREE.Vector3()).multiplyScalar(scale);
+            root.position.sub(center);
+            root.position.y += 0.1;
+            // Respetar materiales originales · solo asegurar shadows y envMapIntensity
+            root.traverse((n) => {
+              if (n.isMesh) {
+                n.castShadow = true;
+                n.receiveShadow = true;
+                const mats = Array.isArray(n.material) ? n.material : (n.material ? [n.material] : []);
+                mats.forEach((m) => {
+                  if ('envMapIntensity' in m) m.envMapIntensity = 1.0;
+                  if (m.map && 'colorSpace' in m.map) m.map.colorSpace = THREE.SRGBColorSpace;
+                });
+              }
+            });
+            this.modelGroup.add(root);
+            this.canvas.dispatchEvent(new CustomEvent('audiq:load'));
+          },
+          undefined,
+          (err) => {
+            console.warn('GLTF load error', err);
+            this.canvas.dispatchEvent(new CustomEvent('audiq:error'));
+          }
+        );
+      }
+      setAutoRotate(b) { this.controls.autoRotate = !!b; }
+      setRotateSpeed(degPerSec) {
+        // OrbitControls.autoRotateSpeed: 1.0 ≈ 12°/s (a 60fps)
+        this.controls.autoRotateSpeed = degPerSec / 12;
+      }
+      setExposure(v) { this.renderer.toneMappingExposure = v; }
+      setShadowIntensity(v) {
+        this.floor.material.opacity = Math.min(1, Math.max(0, v * 0.42));
+        this.keyLight.intensity = 2.0 + Math.max(0, v - 1) * 0.6;
+      }
+      setShadowSoftness(v) {
+        this.keyLight.shadow.radius = 2 + v * 14;
+      }
+      setEnvImage(name) {
+        this._setEnvironment(name);
+      }
+    }
+
+    const canvas = document.getElementById('audiqCanvas');
+    if (canvas) {
+      window.audiqStage = new AudiqStage(canvas);
+      document.dispatchEvent(new CustomEvent('audiqstage:ready'));
+    }
+  </script>
+
+</body>
+</html>
