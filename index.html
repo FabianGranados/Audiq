@@ -823,8 +823,9 @@
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: 45;            /* bajo nav(50)/fab(60), sobre el contenido */
-      mix-blend-mode: screen; /* el verde ilumina sobre el negro */
+      z-index: 45;  /* bajo nav(50)/fab(60), sobre el contenido */
+      /* compositing normal: la estela se ve tanto sobre el negro como
+         sobre el texto/zonas claras. El brillo se arma dentro del canvas. */
     }
     /* Sin estela en táctil ni si el usuario pidió menos movimiento */
     @media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
@@ -1185,6 +1186,10 @@
         var now = performance.now();
         while (points.length && now - points[0].t > LIFE) points.shift();
         ctx.clearRect(0, 0, W, H);
+
+        // Sumar el verde aditivamente dentro del canvas → núcleo luminoso.
+        // (El canvas luego se compone normal sobre la página.)
+        ctx.globalCompositeOperation = 'lighter';
 
         if (points.length > 1) {
           ctx.lineCap = 'round';
