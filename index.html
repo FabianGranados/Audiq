@@ -225,6 +225,44 @@
       pointer-events: none;
     }
 
+    /* ===== AURORA · resplandores verdes que derivan lento ===== */
+    .hero-aurora {
+      position: absolute;
+      inset: 0;
+      z-index: -1;            /* sobre el ::before oscuro, bajo el contenido */
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .aur-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(64px);
+      will-change: transform;
+    }
+    .aur-blob-1 {
+      width: 48%; height: 58%;
+      left: 4%; top: 0%;
+      background: radial-gradient(circle at center, rgba(0,255,136,0.16), transparent 66%);
+      animation: aur-drift-1 26s ease-in-out infinite alternate;
+    }
+    .aur-blob-2 {
+      width: 44%; height: 52%;
+      right: 0%; bottom: -4%;
+      background: radial-gradient(circle at center, rgba(0,210,130,0.12), transparent 66%);
+      animation: aur-drift-2 32s ease-in-out infinite alternate;
+    }
+    @keyframes aur-drift-1 {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(7%, 6%) scale(1.14); }
+    }
+    @keyframes aur-drift-2 {
+      from { transform: translate(0, 0) scale(1.06); }
+      to   { transform: translate(-6%, -8%) scale(0.94); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .aur-blob { animation: none; }
+    }
+
     .hero-grid {
       width: 100%;
       max-width: var(--max);
@@ -895,6 +933,11 @@
 
   <!-- ============ HERO ============ -->
   <main class="hero" role="main">
+    <!-- Aurora verde · resplandores que derivan lento detrás del contenido -->
+    <div class="hero-aurora" aria-hidden="true">
+      <span class="aur-blob aur-blob-1"></span>
+      <span class="aur-blob aur-blob-2"></span>
+    </div>
     <div class="hero-grid">
 
       <!-- LEFT -->
