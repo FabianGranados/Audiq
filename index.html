@@ -815,6 +815,23 @@
     .wa-bubble-close:hover { background: rgba(250,250,250,0.12); color: var(--white); }
 
     /* =========================================================
+       CURSOR TRAIL — estela verde suave (canvas, mix-blend screen)
+       ========================================================= */
+    .cursor-trail {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 45;            /* bajo nav(50)/fab(60), sobre el contenido */
+      mix-blend-mode: screen; /* el verde ilumina sobre el negro */
+    }
+    /* Sin estela en táctil ni si el usuario pidió menos movimiento */
+    @media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+      .cursor-trail { display: none; }
+    }
+
+    /* =========================================================
        RESPONSIVE
        ========================================================= */
     @media (max-width: 960px) {
@@ -1056,6 +1073,9 @@
     <div class="footer-right">v1.0 / DROP 001</div>
   </footer>
 
+  <!-- ============ CURSOR TRAIL ============ -->
+  <canvas id="cursorTrail" class="cursor-trail" aria-hidden="true"></canvas>
+
   <!-- ============ FAB STACK ============ -->
   <div class="fab-stack" aria-hidden="false">
     <!-- Bubble (aparece a los 3s) -->
@@ -1116,6 +1136,92 @@
       };
 
       setTimeout(show, 3000);
+    })();
+  </script>
+
+  <!-- ============ CURSOR TRAIL · estela verde suave ============ -->
+  <script>
+    (function(){
+      // Respetar accesibilidad y dispositivos sin puntero fino
+      var mq = window.matchMedia;
+      if (mq('(prefers-reduced-motion: reduce)').matches) return;
+      if (mq('(hover: none)').matches || mq('(pointer: coarse)').matches) return;
+
+      var canvas = document.getElementById('cursorTrail');
+      if (!canvas) return;
+      var ctx = canvas.getContext('2d');
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var W = 0, H = 0;
+
+      function resize() {
+        W = window.innerWidth; H = window.innerHeight;
+        canvas.width = W * dpr; canvas.height = H * dpr;
+        canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      var GREEN = '0,255,136';
+      var LIFE = 520;            // ms que vive cada punto de la estela
+      var points = [];           // {x, y, t}
+      var headX = 0, headY = 0;
+      var lastMove = 0;
+      var active = false;
+
+      window.addEventListener('mousemove', function(e){
+        var now = performance.now();
+        points.push({ x: e.clientX, y: e.clientY, t: now });
+        headX = e.clientX; headY = e.clientY;
+        lastMove = now; active = true;
+      }, { passive: true });
+
+      // Si el mouse sale de la ventana, dejamos que la estela se apague sola
+      window.addEventListener('mouseout', function(e){
+        if (!e.relatedTarget && !e.toElement) lastMove = performance.now() - LIFE;
+      });
+
+      function frame() {
+        var now = performance.now();
+        while (points.length && now - points[0].t > LIFE) points.shift();
+        ctx.clearRect(0, 0, W, H);
+
+        if (points.length > 1) {
+          ctx.lineCap = 'round';
+          ctx.lineJoin = 'round';
+          for (var i = 1; i < points.length; i++) {
+            var p0 = points[i - 1], p1 = points[i];
+            var a = 1 - (now - p1.t) / LIFE;   // 1 en la cabeza, 0 en la cola
+            if (a <= 0) continue;
+            ctx.strokeStyle = 'rgba(' + GREEN + ',' + (a * 0.55).toFixed(3) + ')';
+            ctx.shadowColor = 'rgba(' + GREEN + ',' + (a * 0.9).toFixed(3) + ')';
+            ctx.shadowBlur = 8 + a * 14;
+            ctx.lineWidth = 1 + a * a * 7;     // se afina hacia la cola
+            ctx.beginPath();
+            ctx.moveTo(p0.x, p0.y);
+            ctx.lineTo(p1.x, p1.y);
+            ctx.stroke();
+          }
+        }
+
+        // Halo de la cabeza · se desvanece cuando el mouse queda quieto
+        var head = Math.max(0, 1 - (now - lastMove) / LIFE);
+        if (active && head > 0) {
+          ctx.shadowBlur = 0;
+          var r = 28;
+          var g = ctx.createRadialGradient(headX, headY, 0, headX, headY, r);
+          g.addColorStop(0,   'rgba(' + GREEN + ',' + (0.30 * head).toFixed(3) + ')');
+          g.addColorStop(0.5, 'rgba(' + GREEN + ',' + (0.10 * head).toFixed(3) + ')');
+          g.addColorStop(1,   'rgba(' + GREEN + ',0)');
+          ctx.fillStyle = g;
+          ctx.beginPath();
+          ctx.arc(headX, headY, r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
     })();
   </script>
 
