@@ -1164,7 +1164,7 @@
       window.addEventListener('resize', resize);
 
       var GREEN = '0,255,136';
-      var LIFE = 520;            // ms que vive cada punto de la estela
+      var LIFE = 620;            // ms que vive cada punto de la estela
       var points = [];           // {x, y, t}
       var headX = 0, headY = 0;
       var lastMove = 0;
@@ -1198,13 +1198,22 @@
             var p0 = points[i - 1], p1 = points[i];
             var a = 1 - (now - p1.t) / LIFE;   // 1 en la cabeza, 0 en la cola
             if (a <= 0) continue;
-            ctx.strokeStyle = 'rgba(' + GREEN + ',' + (a * 0.55).toFixed(3) + ')';
-            ctx.shadowColor = 'rgba(' + GREEN + ',' + (a * 0.9).toFixed(3) + ')';
-            ctx.shadowBlur = 8 + a * 14;
-            ctx.lineWidth = 1 + a * a * 7;     // se afina hacia la cola
+
             ctx.beginPath();
             ctx.moveTo(p0.x, p0.y);
             ctx.lineTo(p1.x, p1.y);
+
+            // Pasada 1 — niebla de spray: ancha, difusa, baja opacidad
+            ctx.strokeStyle = 'rgba(' + GREEN + ',' + (a * 0.16).toFixed(3) + ')';
+            ctx.shadowColor = 'rgba(' + GREEN + ',' + (a * 0.7).toFixed(3) + ')';
+            ctx.shadowBlur = 16 + a * 30;
+            ctx.lineWidth = 14 + a * a * 46;   // trazo gordo tipo grafiti
+            ctx.stroke();
+
+            // Pasada 2 — núcleo denso del trazo
+            ctx.strokeStyle = 'rgba(' + GREEN + ',' + (a * 0.4).toFixed(3) + ')';
+            ctx.shadowBlur = 8 + a * 12;
+            ctx.lineWidth = 5 + a * a * 26;
             ctx.stroke();
           }
         }
@@ -1213,11 +1222,11 @@
         var head = Math.max(0, 1 - (now - lastMove) / LIFE);
         if (active && head > 0) {
           ctx.shadowBlur = 0;
-          var r = 28;
+          var r = 46;
           var g = ctx.createRadialGradient(headX, headY, 0, headX, headY, r);
-          g.addColorStop(0,   'rgba(' + GREEN + ',' + (0.30 * head).toFixed(3) + ')');
-          g.addColorStop(0.5, 'rgba(' + GREEN + ',' + (0.10 * head).toFixed(3) + ')');
-          g.addColorStop(1,   'rgba(' + GREEN + ',0)');
+          g.addColorStop(0,    'rgba(' + GREEN + ',' + (0.35 * head).toFixed(3) + ')');
+          g.addColorStop(0.45, 'rgba(' + GREEN + ',' + (0.14 * head).toFixed(3) + ')');
+          g.addColorStop(1,    'rgba(' + GREEN + ',0)');
           ctx.fillStyle = g;
           ctx.beginPath();
           ctx.arc(headX, headY, r, 0, Math.PI * 2);
