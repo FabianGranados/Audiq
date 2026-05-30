@@ -225,7 +225,7 @@
       pointer-events: none;
     }
 
-    /* ===== AURORA · resplandores verdes que derivan lento ===== */
+    /* ===== AURORA · bloom verde inmersivo detrás del producto ===== */
     .hero-aurora {
       position: absolute;
       inset: 0;
@@ -236,28 +236,50 @@
     .aur-blob {
       position: absolute;
       border-radius: 50%;
-      filter: blur(64px);
       will-change: transform;
     }
+    /* Bloom principal · grande y brillante DETRÁS del producto (derecha) */
     .aur-blob-1 {
-      width: 48%; height: 58%;
-      left: 4%; top: 0%;
-      background: radial-gradient(circle at center, rgba(0,255,136,0.16), transparent 66%);
-      animation: aur-drift-1 26s ease-in-out infinite alternate;
+      width: 64%; height: 86%;
+      right: -8%; top: -6%;
+      background: radial-gradient(circle at center,
+        rgba(0,255,136,0.30) 0%,
+        rgba(0,225,150,0.16) 34%,
+        transparent 64%);
+      filter: blur(80px);
+      animation: aur-drift-1 24s ease-in-out infinite alternate;
     }
+    /* Bloom que sube desde abajo · ancho y suave (ambiente) */
     .aur-blob-2 {
-      width: 44%; height: 52%;
-      right: 0%; bottom: -4%;
-      background: radial-gradient(circle at center, rgba(0,210,130,0.12), transparent 66%);
-      animation: aur-drift-2 32s ease-in-out infinite alternate;
+      width: 90%; height: 60%;
+      left: 8%; bottom: -22%;
+      background: radial-gradient(ellipse at center,
+        rgba(0,235,150,0.14) 0%,
+        transparent 62%);
+      filter: blur(90px);
+      animation: aur-drift-2 30s ease-in-out infinite alternate;
+    }
+    /* Brillo tenue del lado del texto · mantiene legible la izquierda */
+    .aur-blob-3 {
+      width: 46%; height: 56%;
+      left: -8%; top: 6%;
+      background: radial-gradient(circle at center,
+        rgba(0,255,136,0.10) 0%,
+        transparent 66%);
+      filter: blur(76px);
+      animation: aur-drift-3 36s ease-in-out infinite alternate;
     }
     @keyframes aur-drift-1 {
       from { transform: translate(0, 0) scale(1); }
-      to   { transform: translate(7%, 6%) scale(1.14); }
+      to   { transform: translate(-5%, 7%) scale(1.12); }
     }
     @keyframes aur-drift-2 {
-      from { transform: translate(0, 0) scale(1.06); }
-      to   { transform: translate(-6%, -8%) scale(0.94); }
+      from { transform: translate(0, 0) scale(1.05); }
+      to   { transform: translate(6%, -6%) scale(0.95); }
+    }
+    @keyframes aur-drift-3 {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(5%, 5%) scale(1.1); }
     }
     @media (prefers-reduced-motion: reduce) {
       .aur-blob { animation: none; }
@@ -937,6 +959,7 @@
     <div class="hero-aurora" aria-hidden="true">
       <span class="aur-blob aur-blob-1"></span>
       <span class="aur-blob aur-blob-2"></span>
+      <span class="aur-blob aur-blob-3"></span>
     </div>
     <div class="hero-grid">
 
